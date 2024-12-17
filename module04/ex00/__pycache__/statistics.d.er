@@ -1,0 +1,2 @@
+##[pylyzer] failed /home/aithel/delete/module04/ex00/statistics.py 1734398130 104
+.ft_statistics: (*args: Obj, **kwargs := Obj) -> NoneType
