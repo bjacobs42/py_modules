@@ -117,4 +117,4 @@ class Lannister(Character):
         Returns:
             Lannister: A new instance of the Lannister class.
         """
-        return (Lannister(first_name, is_alive))
+        return (Lannister(first_name, is_alive, eyes, hairs))
