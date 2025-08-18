@@ -5,13 +5,15 @@ class StringInfo:
     """
     StringInfo(string: str)
 
-    Class containing the number of lowercase/uppercase letters, punctuation marks, digits and spaces in a string.
+    Class containing the number of lowercase/uppercase letters,
+    punctuation marks, digits and spaces in a string.
     """
 
     def __init__(self, string: str):
         """
         Initializes the StringInfo object with the provided string.
-        Counts the number of lowercase/uppercase letters, punctuation marks, digits and spaces.
+        Counts the number of lowercase/uppercase letters, punctuation marks,
+        digits and spaces.
         """
 
         self.characters = len(string)

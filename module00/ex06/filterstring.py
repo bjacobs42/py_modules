@@ -4,12 +4,14 @@ import sys
 
 def main():
     argc: int = len(sys.argv)
+    min_size: int
+
     try:
         assert argc == 3
         assert sys.argv[1].strip()
-        assert sys.argv[2].isdigit()
+        min_size = int(sys.argv[2])
     except AssertionError:
-        print("AssertionError: Usage: [string, positive integer]")
+        print("AssertionError: Usage: [string, integer]")
         return 1
 
     min_size = int(sys.argv[2])

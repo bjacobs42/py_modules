@@ -12,8 +12,8 @@ setup(
     packages=find_packages(),
     python_requires=">=3.10",
     license="MIT",
-    classifies=[
+    classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approbed :: MIT Lincense",
+        "License :: OSI Approved :: MIT License",
     ]
 )

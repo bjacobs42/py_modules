@@ -6,6 +6,8 @@ Home-page: https://github.com/bjacobs/ft_package
 Author: bjacobs
 Author-email: bjacobs@student.codam.nl
 License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
 Requires-Python: >=3.10
 Description-Content-Type: text/markdown
 License-File: LICENSE
@@ -14,7 +16,7 @@ License-File: LICENSE
 A python library for counting values in iterables, nothing too special
 
 ## Installation
-This library can benstalled directly from PyPI:
+This library can be installed directly from PyPI:
 ```bash
 pip install ft_package
 ```

@@ -4,7 +4,7 @@ def NULL_not_found(object: any) -> int:
     match object:
         case None:
             print(f"Nothing: {object} {object_type}")
-        case float() if object != object:
+        case float() if object != object or object == 0:
             print(f"Cheese: {object} {object_type}")
         case int() if object == 0:
             print(f"Zero: {object} {object_type}")
