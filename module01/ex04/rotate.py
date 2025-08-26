@@ -14,17 +14,18 @@ def ft_rotate() -> None:
     height, width, channels = image_np.shape
 
     transposed_image_np = np.zeros(
-            (width, height, channels), dtype=image_np.dtype)
+        (width, height, channels), dtype=image_np.dtype
+    )
 
-    for i in range(height):
-        for j in range(width):
-            transposed_image_np[j, i, :] = image_np[i, j, :]
+    for y in range(height):
+        for x in range(width):
+            transposed_image_np[x, y, :] = image_np[y, x, :]
 
     print(f"New shape after Transpose: {transposed_image_np.shape}")
     print(transposed_image_np)
     transposed_image: Image.Image = Image.fromarray(transposed_image_np)
     transposed_image.save("./transposed_animal.jpeg")
-    # transposed_image.show()
+    transposed_image.show()
 
 
 if __name__ == "__main__":

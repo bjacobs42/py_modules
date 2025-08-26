@@ -1,6 +1,6 @@
 def slice_me(family: list, start: int, end: int) -> list:
     """
-    Returns a sliced portion of the `family` list from the `start` index up to,
+    Returns a sliced portion of the `family` list from the `start` index up to-
     but not including, the `end` index.
 
     ValueError when start is bigger than the length of `family`,
@@ -9,7 +9,8 @@ def slice_me(family: list, start: int, end: int) -> list:
 
     if not isinstance(family, list):
         raise ValueError("family should be a list")
-    if not all(len(v2) == 2 and isinstance(v2, (list, tuple)) for v2 in family):
+    if not all(len(v2) == 2
+               and isinstance(v2, (list, tuple)) for v2 in family):
         raise ValueError("family vector should be 2d")
     family_len = len(family)
     if start > family_len:

@@ -14,7 +14,7 @@ def ft_invert(array: np.ndarray) -> np.ndarray:
 
     inverted_image = Image.fromarray(inverted_np)
     inverted_image.save("./inverted_image.jpeg")
-    # inverted_image.show()
+    inverted_image.show()
     return inverted_np
 
 
@@ -31,7 +31,7 @@ def ft_red(array: np.ndarray) -> np.ndarray:
 
     red_image = Image.fromarray(red_np)
     red_image.save("./red_image.jpeg")
-    # red_image.show()
+    red_image.show()
     return red_np
 
 
@@ -48,7 +48,7 @@ def ft_green(array: np.ndarray) -> np.ndarray:
 
     green_image = Image.fromarray(green_np)
     green_image.save("./green_image.jpeg")
-    # green_image.show()
+    green_image.show()
     return green_np
 
 
@@ -65,7 +65,7 @@ def ft_blue(array: np.ndarray) -> np.ndarray:
 
     blue_image = Image.fromarray(blue_np)
     blue_image.save("./blue_image.jpeg")
-    # blue_image.show()
+    blue_image.show()
     return blue_np
 
 
@@ -83,5 +83,5 @@ def ft_grey(array: np.ndarray) -> np.ndarray:
 
     grey_image = Image.fromarray(grey_np, mode="L")
     grey_image.save("./grey_image.jpeg")
-    # grey_image.show()
+    grey_image.show()
     return grey_np

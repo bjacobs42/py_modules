@@ -1,11 +1,12 @@
 Metadata-Version: 2.1
-Name: ft_package
+Name: ft-package
 Version: 0.0.1
 Summary: A python library for counting values in iterables
 Home-page: https://github.com/bjacobs/ft_package
 Author: bjacobs
 Author-email: bjacobs@student.codam.nl
 License: MIT
+Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Requires-Python: >=3.10
@@ -28,3 +29,5 @@ from ft_package import count_in_list
 print(count_in_list(["toto", "tata", "toto"], "toto")) # output: 2
 print(count_in_list(["toto", "tata", "toto"], "tutu")) # output: 0
 ```
+
+

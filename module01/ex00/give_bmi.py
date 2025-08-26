@@ -1,4 +1,4 @@
-def is_float_or_int(value: any) -> bool:
+def is_float_or_int(value) -> bool:
     """
     Uses isinstance to check if a value is an int or a float.
     Returns false if value is not an int or a float.

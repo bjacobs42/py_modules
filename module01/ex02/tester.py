@@ -3,15 +3,12 @@ import sys
 
 
 def main():
-    argc: int = sys.argv.count()
+    argc: int = len(sys.argv)
     image_path: str = ""
 
-    try:
-        assert argc <= 2, "Usage: [image path]"
-    except AssertionError as msg:
-        print(msg)
+    if argc > 2:
+        print("Usage: [image path]")
         return
-
     if argc < 2:
         image_path = "../images/animal.jpeg"
     else:

@@ -31,7 +31,7 @@ def ft_zoom() -> None:
     print(f"New shape after slicing: {cropped_image_np.shape}")
     print(cropped_image_np)
     zoomed_image.save("./zoomed_animal.jpeg")
-    # zoomed_image.show()
+    zoomed_image.show()
 
 
 if __name__ == "__main__":
