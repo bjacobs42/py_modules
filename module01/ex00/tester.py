@@ -7,7 +7,5 @@ bmi = give_bmi(height, weight)
 bmi_limit = 26
 
 print(bmi, type(bmi))
-print(
-    "bmi list: [%s]" % ', '.join(map(str, bmi)) + "\nlimit: " + str(bmi_limit)
-)
+print(f"bmi list: {bmi}\nlimit: {bmi_limit}")
 print(apply_limit(bmi, bmi_limit))

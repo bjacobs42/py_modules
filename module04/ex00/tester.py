@@ -1,0 +1,18 @@
+from ft_statistics import ft_statistics
+
+print("-----Tests----")
+ft_statistics(1, 42, 360, 11, 64, toto="mean", tutu="median", tata="quartile")
+print("-----")
+ft_statistics(5, 75, 450, 18, 597, 27474, 48575, hello="std", world="var")
+print("-----Error handling----")
+ft_statistics(5, 75, 450, 18, 597, 27474, 48575, ejfhhe="dwastgtg", ejdjdejn="kdekem")
+print("-----")
+ft_statistics(5, 75, 450, 18, 597, 27474, "Oh no", ejfhhe="mean", ejdjdejn="median")
+print("-----")
+ft_statistics(5, 75, 450, 18, 597, 27474, 48575, ejfhhe="mean", ejdjdejn=20)
+print("-----")
+ft_statistics(toto="mean", tutu="median", tata="quartile")
+print("-----")
+ft_statistics(5, 75, 450, 18, 597, 27474)
+print("-----")
+ft_statistics()
