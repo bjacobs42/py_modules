@@ -9,9 +9,7 @@ def ft_invert(array: np.ndarray) -> np.ndarray:
     Returns a numpy array of the image result.
     """
 
-    inverted_np: np.ndarray = np.copy(array)
-    inverted_np = 255 - inverted_np[:, :, :3]
-
+    inverted_np: np.ndarray = 255 - array
     inverted_image = Image.fromarray(inverted_np)
     inverted_image.save("./inverted_image.jpeg")
     # inverted_image.show()
@@ -27,7 +25,8 @@ def ft_red(array: np.ndarray) -> np.ndarray:
     """
 
     red_np: np.ndarray = np.copy(array)
-    red_np[:, :, 1:3] = 0
+    if array.ndim > 2:
+        red_np[:, :, 1:3] = 0
 
     red_image = Image.fromarray(red_np)
     red_image.save("./red_image.jpeg")
@@ -44,7 +43,8 @@ def ft_green(array: np.ndarray) -> np.ndarray:
     """
 
     green_np: np.ndarray = np.copy(array)
-    green_np[:, :, [0, 2]] = 0
+    if array.ndim > 2:
+        green_np[:, :, [0, 2]] = 0
 
     green_image = Image.fromarray(green_np)
     green_image.save("./green_image.jpeg")
@@ -61,7 +61,8 @@ def ft_blue(array: np.ndarray) -> np.ndarray:
     """
 
     blue_np: np.ndarray = np.copy(array)
-    blue_np[:, :, 0:2] = 0
+    if array.ndim > 2:
+        blue_np[:, :, 0:2] = 0
 
     blue_image = Image.fromarray(blue_np)
     blue_image.save("./blue_image.jpeg")
@@ -78,10 +79,14 @@ def ft_grey(array: np.ndarray) -> np.ndarray:
     """
 
     grey_np: np.ndarray = np.copy(array)
+    if array.ndim > 2:
+        grey_np = (
+            grey_np[:, :, 0] / 3.3445
+            + grey_np[:, :, 1] / 1.704
+            + grey_np[:, :, 2] / 8.7719
+        ).astype(np.uint8)
 
-    grey_np = grey_np.mean(axis=2).astype(np.uint8)
-
-    grey_image = Image.fromarray(grey_np, mode="L")
+    grey_image = Image.fromarray(grey_np)
     grey_image.save("./grey_image.jpeg")
     # grey_image.show()
     return grey_np

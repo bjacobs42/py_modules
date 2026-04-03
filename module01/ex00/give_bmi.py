@@ -1,4 +1,4 @@
-def is_float_or_int(value: any) -> bool:
+def is_float_or_int(value) -> bool:
     """
     Uses isinstance to check if a value is an int or a float.
     Returns false if value is not an int or a float.
@@ -6,9 +6,7 @@ def is_float_or_int(value: any) -> bool:
     return isinstance(value, (int, float))
 
 
-def give_bmi(
-    height: list[int | float], weight: list[int | float]
-) -> list[int | float]:
+def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
     """
     Calculates bmi value from a list of heights and weights.
 
@@ -39,7 +37,5 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     Ignores values which are not int or float
     """
 
-    limit_passed: list = [value > limit
-                          for value in bmi
-                          if is_float_or_int(value)]
+    limit_passed: list = [value > limit for value in bmi if is_float_or_int(value)]
     return limit_passed
