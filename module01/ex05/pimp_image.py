@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 
 
-def ft_invert(array: np.ndarray) -> np.ndarray:
+def ft_invert(array: np.ndarray, show=false) -> np.ndarray:
     """
     Inverts the color of the image received as a numpy array.
 
@@ -12,11 +12,12 @@ def ft_invert(array: np.ndarray) -> np.ndarray:
     inverted_np: np.ndarray = 255 - array
     inverted_image = Image.fromarray(inverted_np)
     inverted_image.save("./inverted_image.jpeg")
-    inverted_image.show()
+    if show:
+        inverted_image.show()
     return inverted_np
 
 
-def ft_red(array: np.ndarray) -> np.ndarray:
+def ft_red(array: np.ndarray, show=false) -> np.ndarray:
     """
     Sets green and blue channel to zero (red scaling)
     in the image received as a numpy array.
@@ -30,11 +31,12 @@ def ft_red(array: np.ndarray) -> np.ndarray:
 
     red_image = Image.fromarray(red_np)
     red_image.save("./red_image.jpeg")
-    red_image.show()
+    if show:
+        red_image.show()
     return red_np
 
 
-def ft_green(array: np.ndarray) -> np.ndarray:
+def ft_green(array: np.ndarray, show=false) -> np.ndarray:
     """
     Sets blue and red channel to zero (green scaling)
     in the image received as a numpy array.
@@ -48,11 +50,12 @@ def ft_green(array: np.ndarray) -> np.ndarray:
 
     green_image = Image.fromarray(green_np)
     green_image.save("./green_image.jpeg")
-    green_image.show()
+    if show:
+        green_image.show()
     return green_np
 
 
-def ft_blue(array: np.ndarray) -> np.ndarray:
+def ft_blue(array: np.ndarray, show=false) -> np.ndarray:
     """
     Sets green and red channel to zero (blue scaling)
     in the image received as a numpy array.
@@ -66,11 +69,12 @@ def ft_blue(array: np.ndarray) -> np.ndarray:
 
     blue_image = Image.fromarray(blue_np)
     blue_image.save("./blue_image.jpeg")
-    blue_image.show()
+    if show:
+        blue_image.show()
     return blue_np
 
 
-def ft_grey(array: np.ndarray) -> np.ndarray:
+def ft_grey(array: np.ndarray, show=false) -> np.ndarray:
     """
     Divides each channel with grey scale formula values,
     grey scaling the image received as a numpy array.
@@ -88,5 +92,6 @@ def ft_grey(array: np.ndarray) -> np.ndarray:
 
     grey_image = Image.fromarray(grey_np)
     grey_image.save("./grey_image.jpeg")
-    grey_image.show()
+    if show:
+        grey_image.show()
     return grey_np
